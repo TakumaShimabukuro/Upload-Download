@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teste</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/static/js/postrequest.js"></script>
+    <script src="/static/js/getrequest.js"></script>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h3>Upload e Download:</h3>
+        <div class="card">
+            <div class="card-body">
+                <form class="form-horizontal" method="POST" enctype="multipart/form-data" id="fileUploadForm">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="uploadfile">Upload File:</label>
+                        <div class="col-sm-5">
+                            <input type="file" class="form-control" id="uploadfile" placeholder="Upload File"  name="uploadfile"></input>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <div class="col-sm-offset-2 col-sm-5">
+                            <button type="submit" class="btn btn-success" id="btnSubmit">Upload</button>
+                            <button type="button" class="btn btn-success" id="btnGetFiles">Download list</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr/>
+        <div class="col-sm-offset-2" id="listFiles">
+        </div>
+    </div>
+</body>
+<script src="/js/bootstrap.js"></script>
+</html>
